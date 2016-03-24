@@ -1,0 +1,8 @@
+## Overrides from NAStools
+# Overrides for ReadyNAS packaging
+nastools-transmission: non-standard-toplevel-dir
+nastools-transmission: file-in-unusual-dir
+nastools-transmission: non-etc-file-marked-as-conffile
+
+# Nothing we can do about these, since they're upstream
+nastools-transmission: embedded-javascript-library

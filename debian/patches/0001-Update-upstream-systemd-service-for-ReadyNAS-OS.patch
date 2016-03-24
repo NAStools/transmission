@@ -1,0 +1,27 @@
+From: NAStools <dev@nas.tools>
+Date: Mon, 21 Mar 2016 12:55:57 -0700
+Subject: Update upstream systemd service for ReadyNAS OS
+
+---
+ daemon/transmission-daemon.service |    7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/daemon/transmission-daemon.service b/daemon/transmission-daemon.service
+index 8a1d429..e56c4d5 100644
+--- a/daemon/transmission-daemon.service
++++ b/daemon/transmission-daemon.service
+@@ -3,9 +3,12 @@ Description=Transmission BitTorrent Daemon
+ After=network.target
+ 
+ [Service]
+-User=transmission
++User=nastools-transmission
++group=nastools-transmission
+ Type=notify
+-ExecStart=/usr/bin/transmission-daemon -f --log-error
++Environment=TRANSMISSION_HOME=/apps/nastools-transmission/etc
++Environment=TRANSMISSION_WEB_HOME=/apps/nastools-transmission/www
++ExecStart=/apps/nastools-transmission/bin/transmission-daemon -f --log-error
+ ExecReload=/bin/kill -s HUP $MAINPID
+ 
+ [Install]

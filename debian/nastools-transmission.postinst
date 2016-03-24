@@ -1,0 +1,32 @@
+#!/bin/sh
+
+set -e
+
+test $DEBIAN_SCRIPT_DEBUG && set -v -x
+
+chperms() {
+	# chperms <user> <group> <perms> <file>
+	if ! OVERRIDE=`dpkg-statoverride --list $4 2>&1`; then
+		if [ -e $4 ]; then
+			chown $1:$2 $4
+			chmod $3 $4
+		fi
+	fi
+}
+
+case "$1" in
+  configure)
+    if ! $(getent group nastools-transmission >/dev/null 2>&1); then
+        rn_nml -a group:nastools-transmission
+    fi
+    if ! $(getent passwd nastools-transmission >/dev/null 2>&1); then
+        rn_nml -a user:nastools-transmission:nastools-transmission
+    fi
+    chperms nastools-transmission nastools-transmission 4775 /apps/nastools-transmission/downloads
+    chperms nastools-transmission nastools-transmission 0660 /apps/nastools-transmission/etc/settings.json
+    chperms nastools-transmission nastools-transmission 2775 /apps/nastools-transmission/etc
+    systemctl restart apache2
+  ;;
+esac
+
+#DEBHELPER#

@@ -1,0 +1,14 @@
+#!/usr/bin/dh-exec
+daemon/transmission-daemon.service => apps/nastools-transmission/fvapp-nastools-transmission.service
+usr/bin/transmission-cli apps/nastools-transmission/bin
+usr/bin/transmission-create apps/nastools-transmission/bin
+usr/bin/transmission-edit apps/nastools-transmission/bin
+usr/bin/transmission-remote apps/nastools-transmission/bin
+usr/bin/transmission-show apps/nastools-transmission/bin
+usr/share/transmission/web => apps/nastools-transmission/www
+debian/README.json apps/nastools-transmission/etc
+debian/settings.json apps/nastools-transmission/etc
+usr/bin/transmission-daemon apps/nastools-transmission/bin
+debian/readynas/config.xml apps/nastools-transmission
+debian/readynas/logo.png apps/nastools-transmission
+debian/readynas/https.conf apps/nastools-transmission

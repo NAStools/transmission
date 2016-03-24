@@ -1,0 +1,14 @@
+<Application resource-id="nastools-transmission">
+  <Version>2.92-nt1</Version>
+  <MinFirmwareVer>6.5.0-T322</MinFirmwareVer>
+  <Name>Transmission NT</Name>
+  <Author>NAStools</Author>
+  <RequireReboot>0</RequireReboot>
+  <LaunchURL>https://localhost/apps/nastools-transmission</LaunchURL>
+  <InfoURL>https://github.com/nastools/transmission</InfoURL>
+  <DebianPackage>nastools-transmission</DebianPackage>
+  <ServiceName>fvapp-nastools-transmission.service</ServiceName>
+  <Description>lightweight BitTorrent client</Description>
+  <ConfigURL/>
+  <ReservePort>9201</ReservePort>
+</Application>

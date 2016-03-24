@@ -1,0 +1,48 @@
+Source: transmission
+Section: net
+Priority: optional
+Maintainer: NAStools <dev@nas.tools>
+Build-Depends: autotools-dev,
+               dpkg-dev (>= 1.16.17),
+               debhelper (>= 9),
+               dh-exec,
+               dh-autoreconf,
+               dh-systemd [linux-any],
+               intltool (>= 0.40),
+               libcurl4-gnutls-dev | libcurl4-dev | libcurl-dev,
+               libevent-dev (>= 2.0),
+               libminiupnpc-dev (>= 1.9),
+               libnatpmp-dev (>= 20110808),
+               libssl-dev,
+               libsystemd-daemon-dev [linux-any],
+               zlib1g-dev
+Standards-Version: 3.9.4
+Vcs-Browser: https://github.com/nastools/transmission
+Vcs-Git: git://github.com/nastools/transmission.git
+Homepage: http://www.transmissionbt.com/
+
+Package: nastools-transmission
+Architecture: any
+Depends: readynasos (>= 6.5.0~T322),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: lightweight BitTorrent client
+ Transmission is a set of lightweight BitTorrent clients (in GUI, CLI
+ and daemon form). All its incarnations feature a very simple, intuitive
+ interface on top on an efficient, cross-platform back-end.
+
+Package: nastools-transmission-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: readynasos (>= 6.5.0~T322),
+         nastools-transmission,
+         ${misc:Depends}
+Description: lightweight BitTorrent client (debug symbols)
+ Transmission is a set of lightweight BitTorrent clients (in GUI, CLI
+ and daemon form). All its incarnations feature a very simple, intuitive
+ interface on top on an efficient, cross-platform back-end.
+ .
+ This package contains the debug symbols for the different transmission
+ executables. Most users won't need this, but please install it before
+ submitting bugs with crashes.
