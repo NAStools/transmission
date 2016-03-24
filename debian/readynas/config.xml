@@ -8,7 +8,7 @@
   <InfoURL>https://github.com/nastools/transmission</InfoURL>
   <DebianPackage>nastools-transmission</DebianPackage>
   <ServiceName>fvapp-nastools-transmission.service</ServiceName>
-  <Description>lightweight BitTorrent client</Description>
+  <Description lang="en-us">lightweight BitTorrent client</Description>
   <ConfigURL/>
   <ReservePort>9201</ReservePort>
 </Application>
