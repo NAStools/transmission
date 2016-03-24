@@ -12,3 +12,4 @@ usr/bin/transmission-daemon apps/nastools-transmission/bin
 debian/readynas/config.xml apps/nastools-transmission
 debian/readynas/logo.png apps/nastools-transmission
 debian/readynas/https.conf apps/nastools-transmission
+debian/readynas/https.overrides apps/nastools-transmission/etc
