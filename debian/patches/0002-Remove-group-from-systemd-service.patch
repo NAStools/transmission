@@ -1,0 +1,21 @@
+From: NAStools <dev@nas.tools>
+Date: Thu, 31 Mar 2016 00:10:50 -0700
+Subject: Remove group from systemd service
+
+Whoops... That isn't a valid option!
+---
+ daemon/transmission-daemon.service | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/daemon/transmission-daemon.service b/daemon/transmission-daemon.service
+index e56c4d5..869e4fb 100644
+--- a/daemon/transmission-daemon.service
++++ b/daemon/transmission-daemon.service
+@@ -4,7 +4,6 @@ After=network.target
+ 
+ [Service]
+ User=nastools-transmission
+-group=nastools-transmission
+ Type=notify
+ Environment=TRANSMISSION_HOME=/apps/nastools-transmission/etc
+ Environment=TRANSMISSION_WEB_HOME=/apps/nastools-transmission/www
