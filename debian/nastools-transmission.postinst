@@ -25,7 +25,6 @@ case "$1" in
     chperms nastools-transmission nastools-transmission 4775 /apps/nastools-transmission/downloads
     chperms nastools-transmission nastools-transmission 0660 /apps/nastools-transmission/etc/settings.json
     chperms nastools-transmission nastools-transmission 2775 /apps/nastools-transmission/etc
-    systemctl restart apache2
   ;;
 esac
 
