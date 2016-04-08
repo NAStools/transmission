@@ -8,14 +8,13 @@ Build-Depends: autotools-dev,
                debhelper (>= 9),
                dh-exec,
                dh-autoreconf,
-               dh-systemd [linux-any],
                intltool (>= 0.40),
                libcurl4-gnutls-dev | libcurl4-dev | libcurl-dev,
                libevent-dev (>= 2.0),
                libminiupnpc-dev (>= 1.9),
                libnatpmp-dev (>= 20110808),
                libssl-dev,
-               libsystemd-daemon-dev [linux-any],
+               libsystemd-daemon-dev,
                zlib1g-dev
 Standards-Version: 3.9.4
 Vcs-Browser: https://github.com/nastools/transmission

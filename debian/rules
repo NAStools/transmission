@@ -11,9 +11,6 @@ include /usr/share/dpkg/buildflags.mk
 DH_EXTRA_ARGS := --with autoreconf
 
 DEB_HOST_ARCH_OS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
-ifeq ($(DEB_HOST_ARCH_OS),linux)
-	DH_EXTRA_ARGS += --with systemd
-endif
 
 %:
 	dh $@ $(DH_EXTRA_ARGS)
