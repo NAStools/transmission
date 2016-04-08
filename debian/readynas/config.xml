@@ -1,5 +1,5 @@
 <Application resource-id="nastools-transmission">
-  <Version>2.92-nt1</Version>
+  <Version>2.92-nt2</Version>
   <MinFirmwareVer>6.5.0-T322</MinFirmwareVer>
   <Name>Transmission NT</Name>
   <Author>NAStools</Author>

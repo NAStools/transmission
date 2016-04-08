@@ -1,3 +1,14 @@
+transmission (2.92-nt2) unstable; urgency=medium
+
+  * Add lang attribute to Description
+  * Allow customization of Apache settings
+  * Add build dependency for pkg-config
+  * Remove group from systemd service
+  * Remove apache restart
+  * Remove dh-systemd
+
+ -- NAStools <dev@nas.tools>  Mon, 04 Apr 2016 13:41:46 -0700
+
 transmission (2.92-nt1) unstable; urgency=medium
 
   * Initial release.
